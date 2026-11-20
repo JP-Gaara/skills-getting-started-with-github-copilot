@@ -81,8 +81,21 @@ section h3 {
 }
 
 .participants-list {
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   overflow-wrap: anywhere;
+}
+
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.participants-list li span {
+  min-width: 0;
 }
 
 .participants-empty {
@@ -122,6 +135,25 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.delete-participant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 6px;
+  background-color: transparent;
+  color: #c62828;
+}
+
+.delete-participant:hover {
+  background-color: #ffebee;
+}
+
+.delete-participant:disabled {
+  opacity: 0.5;
+  cursor: wait;
 }
 
 .message {
